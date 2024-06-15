@@ -1,0 +1,358 @@
+.creativeHub-main-container {
+  padding-left: 48px;
+  width: 100%;
+  height: calc(100% - 81px);
+  transition: all 0.5s ease;
+  animation: slideUp 2s ease-in-out;
+}
+
+.creativeHub-main-container.end {
+  transform: translateY(-120%);
+  transition: transform 1s linear;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 0.9;
+  }
+}
+
+.creativeHub-sub-container {
+  // gap: 158px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(251, 247, 240, 0.8);
+  backdrop-filter: blur(50px);
+  height: 100%;
+  padding: 30px 0;
+}
+
+.creativeHub-primary-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 40px 29.5px;
+
+  ::-webkit-scrollbar {
+    width: 13px;
+  }
+
+  /* Track */
+  // ::-webkit-scrollbar-track {
+  //     box-shadow: inset 0 0 5px grey;
+  //     border-radius: 80px;
+  // }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #d9d9d9;
+    border-radius: 10px;
+  }
+
+  .creativeHub-primary-left-container {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    // gap: 24px;
+    overflow-y: scroll;
+    padding-right: 58.5px;
+    max-height: 390px;
+
+    .creativeHub-primary-content {
+      h2 {
+        font-size: 24px;
+        font-family: "Maison Neu Light";
+        font-weight: 400;
+      }
+    }
+
+    .creativeHub-primary-content {
+      p {
+        font-family: "Maison Neu Light";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 29px;
+        letter-spacing: -0.96px;
+      }
+    }
+
+    .creativeHub-primary-option {
+      cursor: pointer;
+      border-top: 1px solid black;
+      padding: 16px;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background: #ff876c;
+      }
+      h4 {
+        font-size: 16px;
+        font-family: "Maison Neu Light";
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: -0.64px;
+
+        span {
+          font-family: "Maison Neu Bold";
+        }
+      }
+    }
+  }
+}
+
+.footer-left-content {
+  width: 100%;
+  //   padding-right: 58.5px;
+}
+
+.footer-left-sub-content {
+  width: 618px;
+  height: 81px;
+  display: flex;
+  gap: 6px;
+}
+
+.footer-left-sub-content > textarea {
+  width: 100%;
+  // padding-right: 5px;
+  padding: 12px;
+  font-size: 16px;
+  background-color: transparent;
+  resize: none;
+  border: none;
+  outline: none;
+  border: 1px solid var(--neutral-onyx-grey, #646464);
+
+  &:active,
+  &:focus,
+  &:hover
+   {
+    border: 1px solid #101010;
+  }
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  z-index: 100;
+  height: 160px;
+  padding: 0px 40px;
+  background: transparent;
+  font-family: "Maison Neu Light";
+  font-weight: 400;
+  // box-shadow: 0px -6px 8px 0px rgba(0, 0, 0, 0.04);
+  // box-shadow: 0px -8px 4px 0px rgba(0, 0, 0, 0.04);
+
+  .footer-left-container {
+    // max-width: 50%;
+    font-size: 16px;
+  }
+
+  .footer-right-container {
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 54px;
+      width: 240px;
+      // background: none;
+      border: 1px solid #000;
+      font-size: 20px;
+
+      background: linear-gradient(to left, transparent 50%, #000 50%) right;
+      background-size: 200% 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      z-index: 2;
+
+      &:hover {
+        background-position: left;
+        color: #fefefe;
+      }
+
+      img {
+        margin-left: 12px;
+      }
+    }
+  }
+}
+
+.dummy-image {
+  width: 390px;
+  // width: 450px;
+  // height: 430px;
+}
+
+.suggestion-span {
+  color: var(--neutral-onyx-grey, #101010);
+  font-family: "Maison Neu Light";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.64px;
+  padding-top: 30px;
+}
+
+.option3 {
+  padding-bottom: 16px;
+  color: var(--neutral-onyx-grey, #101010);
+  font-family: "Maison Neu Light";
+  font-size: 16px;
+  font-style: normal;
+  // font-weight: 700;
+  line-height: 19px;
+  letter-spacing: -0.64px;
+}
+
+@media screen and (max-width: 1024px) {
+  .creativeHub-main-container {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .footer-left-sub-content {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .creativeHub-primary-container {
+    flex-direction: column-reverse;
+    // padding: 0 29.5px;
+    align-items: center;
+    overflow-y: scroll;
+  }
+
+  .creativeHub-primary-container::-webkit-scrollbar {
+    width: 13px;
+  }
+
+  .creativeHub-primary-container::-webkit-scrollbar-thumb {
+    background: #d9d9d9;
+    border-radius: 10px;
+  }
+
+  .creativeHub-primary-container .creativeHub-primary-left-container {
+    max-width: 80%;
+    max-height: fit-content;
+    // padding-top: 15px;
+    padding-right: 15px;
+    overflow-y: visible;
+    margin-bottom: 200px;
+    // scroll-padding-top: 100px;
+  }
+
+  .dummy-image {
+    // width: 240px;
+    .dummy-image {
+      width: 390px;
+      // width: 240px;
+      // height: 240px;
+    }
+  }
+
+  .footer-container {
+    position: fixed;
+    width: 100%;
+    padding: 20px 0;
+    height: 230px;
+    background: #fbf7f0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .creativeHub-primary-container
+    .creativeHub-primary-left-container
+    .creativeHub-primary-content
+    h2 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .footer-left-sub-content {
+    width: calc(100vw - 50px);
+    margin: 0 15px;
+  }
+
+  .footer-container .footer-right-container button {
+    width: calc(100vw - 50px);
+  }
+
+  .dummy-image {
+    // width: 350px;
+    width: 240px;
+    height: 240px;
+    // justify-content: center;
+    // align-items: center;
+    // width: 450px;
+    // height: 430px;
+  }
+
+  .creativeHub-primary-container {
+    // padding: 10px 29.5px;
+    padding: unset;
+
+    .creativeHub-primary-left-container {
+      width: unset;
+      padding: unset;
+
+      .creativeHub-primary-content {
+        p {
+          font-family: "Maison Neu Light";
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 22px;
+          letter-spacing: -0.72px;
+        }
+      }
+    }
+  }
+
+  .option3 {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+.App.purple-green-gradient {
+  min-height: 100vh;
+  height: max-content;
+}
+
+.bold-font {
+  font-weight: bold;
+}
+
+@media (pointer: coarse) {
+  .creativeHub-primary-option {
+    &:hover {
+      background: none !important;
+    }
+    &:focus,
+    &:active {
+      background: #ff876c;
+    }
+  }
+}

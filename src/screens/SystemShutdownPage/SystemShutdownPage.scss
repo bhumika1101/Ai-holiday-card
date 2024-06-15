@@ -1,0 +1,327 @@
+.error-page {
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 87.2px);
+    width: 100%;
+}
+.error-messages {
+    width: 850px;
+    font-size: 48px;
+    text-align: center;
+}
+.logo-mesgs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 57.6px;
+    letter-spacing: -1.92px;
+    height: 550px
+}
+.logo-msg-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 53px;
+    // gap: 279.5px;
+}
+.error-circle {
+    position: absolute;
+    top: -150px;
+    left: 822px;
+    width: 404px;
+    height: 404.262px;
+    transform: rotate(159.522deg);
+    animation: circle 1.8s linear;
+}
+@keyframes circle { 
+    0% {
+      transform: rotate(90deg);
+      bottom: -400px;
+      right: 0px;
+    }
+    99% {
+      transform: rotate(0deg);
+    }
+    100% {
+      right: -25px;
+    }
+}
+
+.error-triangle {
+    position: absolute;
+    bottom: 155px;
+    right: -66px;
+    width: 428px;
+    height: 377px;  
+    animation: triangle 1.8s linear;
+}
+@keyframes triangle {
+    0% {
+      transform: rotate(90deg);
+      right: 0px;
+    }
+    99% {
+      transform: rotate(0deg);
+    }
+  }
+
+.error-star {
+    position: absolute;
+    bottom: 0;
+    left: -150px;
+    width: 650px;
+    height: 648px;
+    transform: rotate(-60.188deg);
+    animation: star 1.8s linear;
+}
+@keyframes star { 
+    0% {
+      transform: rotate(90deg);
+      bottom: -100px;
+      right: 0px;
+    }
+    99% {
+      transform: rotate(-40deg);
+    }
+    100% {
+      right: -25px;
+    }
+}
+
+
+@media screen and (max-width: 1300px) {
+    .error-star {
+        width: 636px;
+        height: 548px;
+    }
+}
+
+@media screen and (max-width: 1245px) {
+    .error-circle {
+        left: 707px;
+    }
+}
+
+@media screen and (max-width: 1139px) {
+    .error-circle {
+        left: 600px;
+    }
+}
+
+
+@media screen and (max-width: 1062px) {
+    .error-circle {
+        position: absolute;
+        top: -85px;
+        left: 540px;
+        width: 304px;
+        height: 304.262px;
+        transform: rotate(159.522deg);
+    }
+    .error-star {
+        width: 500px;
+        height: 448px;
+    }
+    .error-triangle {
+        bottom: 52px;
+    }
+    .error-graphics {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 995px) {
+    .error-messages {
+        font-size: 38px;
+        width: 683px;
+    }
+}
+
+@media screen and (max-width: 954px) {
+    .error-messages {
+        font-size: 33px;
+        width: 500px;
+    }
+    .error-circle {
+        position: absolute;
+        top: -85px;
+        left: 480px;
+        width: 250px;
+        height: 304.262px;
+        transform: rotate(159.522deg);
+    }
+    .error-star {
+        width: 430px;
+        height: 428px;
+    }
+    .error-triangle {
+        position: absolute;
+        bottom: 80px;
+        right: -66px;
+        width: 380px;
+        height: 350px;  
+    }
+    .error-btn {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .error-messages {
+        width: 549px;
+    }
+    .error-circle {
+        position: absolute;
+        top: -90px;
+        left: 480px;
+        width: 180px;
+        height: 304.262px;
+        transform: rotate(159.522deg);
+    }
+    .error-star {
+        width: 360px;
+        height: 390px;
+    }
+    .error-triangle {
+        position: absolute;
+        bottom: 70px;
+        right: -6px;
+        width: 200px;
+        height: 280px;  
+    }
+    .error-graphics {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 673px) {
+    .error-circle {
+        position: absolute;
+        top: -90px;
+        left: 400px;
+        width: 180px;
+        height: 304.262px;
+        transform: rotate(159.522deg);
+    }
+    .error-triangle {
+        position: absolute;
+        bottom: 40px;
+        right: -6px;
+        width: 200px;
+        height: 280px;  
+    }
+    .error-graphics {
+        left: -65px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .error-circle {
+        position: absolute;
+        top: -90px;
+        left: 300px;
+        width: 180px;
+        height: 304.262px;
+        transform: rotate(159.522deg);
+    }
+}
+
+
+@media screen and (max-width: 541px) {
+    .error-star {
+        width: 292px;
+        left: -80px ;
+    }
+}
+
+@media screen and (max-width: 493px) {
+    .error-circle {
+        position: absolute;
+        top: -90px;
+        left: 220px;
+        width: 180px;
+        height: 304.262px;
+        transform: rotate(159.522deg);
+    }
+}
+
+@media screen and (max-width: 407px) {
+    .error-circle {
+        position: absolute;
+        top: -90px;
+        left: 130px;
+        width: 180px;
+        height: 304.262px;
+        transform: rotate(159.522deg);
+    }
+    .error-triangle {
+        position: absolute;
+        bottom: 40px;
+        right: -6px;
+        width: 170px;
+        height: 280px;  
+    }
+    .error-star {
+        width: 220px;
+        left: -80px ;
+    }
+}
+
+
+
+@media screen and (max-width: 852px) {
+    .error-messages {
+        width: 550px;
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .error-messages {
+        width: 560px;
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 676px) {
+    .error-messages {
+        width: 550px;
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 582px) {
+    .error-messages {
+        width: 440px;
+        font-size: 28px;
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 476px) {
+    .error-messages {
+        width: 400px;
+        font-size: 25px;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 419px) {
+    .error-messages {
+        width: 350px;
+        font-size: 23px;
+        line-height: 27px;
+    }
+}
+
+@media screen and (max-width: 361px) {
+    .error-messages {
+        width: 300px;
+        font-size: 23px;
+        line-height: 27px;
+    }
+}

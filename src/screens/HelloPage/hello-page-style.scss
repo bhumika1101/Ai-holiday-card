@@ -1,0 +1,469 @@
+.helloPage-section {
+  width: 100%;
+  height: 100%;
+  font-family: "Maison Neu MG Light";
+}
+
+.helloPage-content {
+  height: calc(100vh - 87px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // height: 100%;
+  padding: 0px 48px;
+}
+
+.d-none {
+  visibility: hidden;
+}
+
+.welcome-text {
+  font-size: 24px;
+  font-family: "Maison Neu Light";
+  // font-weight: 400;
+  line-height: 120%;
+  opacity: 1;
+}
+
+.welcome-text.start {
+  animation: fadeInDown1 1s ease-in-out;
+  -webkit-animation: fadeInDown1 1s ease-in-out;
+  -moz-animation: fadeInDown1 1s ease-in-out;
+  -o-animation: fadeInDown1 1s ease-in-out;
+  -ms-transition: fadeInDown1 1s ease-in-out;
+
+  animation-delay: 0s;
+
+  @media screen and (max-width: 768px) {
+    animation: fadeInLeft 1s ease-out;
+    -webkit-animation: fadeInLeft 1s ease-out;
+    -moz-animation: fadeInLeft 1s ease-out;
+    -o-animation: fadeInLeft 1s ease-out;
+    -ms-transition: fadeInLeft 1s ease-out;
+  }
+}
+
+.welcome-text.end {
+  animation: fadeInUp1 1s ease-in-out forwards;
+  animation-delay: 4s;
+}
+
+@keyframes fadeInDown1 {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeInUp1 {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  100% {
+    // opacity: 1;
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+}
+
+.clientName-text {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 120%;
+  opacity: 1;
+  font-family: "Maison Neu Light";
+  max-width: 200px;
+}
+
+.clientName-text.img {
+    // border: 1px solid red;
+    // width: 100px;
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 50px;
+    max-height: 50px;
+}
+
+.clientName-text.start {
+  // padding-right: 48px;
+
+  animation: fadeInUp 1s ease-out;
+  -webkit-animation: fadeInUp 1s ease-out;
+  -moz-animation: fadeInUp 1s ease-out;
+  -o-animation: fadeInUp 1s ease-out;
+  -ms-transition: fadeInUp 1s ease-out;
+  // animation-delay: 0.5s;
+
+  @media screen and (max-width: 768px) {
+    animation: fadeInRight 1s ease-out;
+    -webkit-animation: fadeInRight 1s ease-out;
+    -moz-animation: fadeInRight 1s ease-out;
+    -o-animation: fadeInRight 1s ease-out;
+    -ms-transition: fadeInRight 1s ease-out;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(-40px);
+  }
+}
+
+.clientName-text.end {
+  animation: fadeInDown2 1s ease-out forwards;
+  animation-delay: 4s;
+}
+
+@keyframes fadeInDown2 {
+  0% {
+    opacity: 1;
+    transform: translateY(-40px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+}
+
+.welcome-text.hidden,
+.clientName-text.hidden {
+  opacity: 0;
+}
+
+.hello-circle-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 480px;
+  height: 480px;
+  // padding-left: 3%;
+  // border: 1px solid red;
+}
+
+.hello-images {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: baseline;
+  opacity: 1;
+  width: max-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // animation: slideDownAndDisappear 4s infinite ease-in;
+  // -webkit-animation: slideDownAndDisappear 4s infinite ease-in;
+  // -moz-animation: slideDownAndDisappear 4s infinite ease-in;
+  // -o-animation: slideDownAndDisappear 4s infinite ease-in;
+  // -ms-transition: slideDownAndDisappear 4s infinite ease-in;
+}
+
+.circle-img {
+  width: 100%;
+  height: 100%;
+  //   position: absolute;
+  //   left: 0;
+  // opacity: 0;
+  // visibility: hidden;
+  /* Initially hide the circle image */
+  animation: zoomInOut 4s ease-in-out forwards 8s;
+  // -webkit-animation: zoomInOut 4s ease-in-out forwards 8s;
+  // -moz-animation: zoomInOut 4s ease-in-out forwards 8s;
+  // -o-animation: zoomInOut 4s ease-in-out forwards 8s;
+  // -ms-transition: zoomInOut 4s ease-in-out forwards 8s;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.2);
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.6);
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.icon path {
+  fill: transparent;
+  stroke: black;
+  stroke-width: 10;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: animate-circle 5s forwards linear;
+}
+
+@keyframes animate-circle {
+  0% {
+    stroke-dashoffset: 2000;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+// .icon path {
+//     fill: transparent;
+//     stroke: black;
+//     stroke-width: 20; /* Adjust the stroke width as needed */
+//     stroke-dasharray: 2000;
+//     stroke-dashoffset: 2000;
+//     animation: animate-circle 5s forwards linear;
+// }
+
+// @keyframes animate-circle {
+//     0% {
+//         stroke-dashoffset: 2000;
+//     }
+
+//     100% {
+//         stroke-dashoffset: 0;
+//     }
+// }
+
+.companyDetails {
+  min-width: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .helloPage-content {
+    // padding: 17px 24px;
+    flex-direction: column;
+  }
+
+  .welcome-text {
+    width: 100%;
+    text-align: left;
+  }
+
+  /* .clientName-text {
+          width: 100%;
+          text-align: right;
+      } */
+
+  .companyDetails {
+    position: relative;
+    width: 100%;
+  }
+
+  .companyDetails .clientName-text {
+    float: right;
+  }
+
+  // .letter-images {
+  //     width: 50px;
+  // }
+
+  // .l-letter {
+  //     height: 90px;
+  // }
+
+  // .h-letter {
+  //     width: 68px;
+  // }
+}
+
+@media screen and (max-width: 600px) {
+  .helloPage-content {
+    flex-direction: column;
+    // padding: 17ppx 24px;
+  }
+
+  .hello-images {
+    display: flex;
+    gap: 2px;
+  }
+
+  .letter-images {
+    width: 65px;
+  }
+
+  .h-letter {
+    width: 75px;
+    height: 90px;
+  }
+
+  .l-letter {
+    height: 90px;
+    width: 35px;
+  }
+
+  .welcome-text {
+    width: 100%;
+    text-align: left;
+  }
+
+  .clientName-text {
+    width: 100%;
+    text-align: right;
+  }
+  .hello-circle-images {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@keyframes slideDownAndDisappear {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.letter-images {
+  // width: 300px;
+  // height: 300px;
+}
+
+.letter-images path {
+  fill: transparent;
+  stroke: 10;
+  stroke: black;
+}
+
+.letter-images.h-letter path,
+.e-letter path,
+.l-letter path,
+.o-letter path {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 0;
+  animation: draw 10s forwards;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+
+  40% {
+    stroke-dashoffset: 300;
+    fill: transparent;
+  }
+
+  80% {
+    stroke-dashoffset: 600;
+    fill: grey;
+  }
+
+  100% {
+    fill: black;
+    stroke-dashoffset: 600;
+  }
+}
+
+.purple-yellow-gradient {
+  position: relative;
+}
+
+.firstColor {
+  position: absolute;
+  border: 1px solid red;
+  top: -100px;
+  left: -80px;
+}
+
+.firstColor:hover {
+  .circle {
+    transition: all 2s ease;
+    fill: #d9d9d9;
+    width: 548px;
+    height: 548px;
+    border: none;
+    outline: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  @media screen and (orientation: landscape) {
+    .helloPage-content {
+      min-height: 100dvh;
+      height: max-content;
+    }
+  }
+}
+
+@media screen and (max-height: 800px) {
+    .helloPage-section {
+      height: auto;
+      overflow-y: auto;
+      min-height: 100vh;
+    }
+  }
+
+  .App.yellow-purple-gradient {
+    height: auto;
+    overflow-y: auto;
+    min-height: 100vh;
+  }

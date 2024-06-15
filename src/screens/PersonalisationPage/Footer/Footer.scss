@@ -1,0 +1,278 @@
+$persnlstn-font-family: Maison Neue;
+$persnlstn-font-family-mono: Maison Neue Mono;
+
+@font-face {
+  font-family: "Pixelated-Font";
+  src: url("../../../../public/content/fonts/Pixel/PixeloidSans.ttf");
+}
+
+.footer {
+  //   padding: 80px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 160px;
+}
+
+.footer-inp,
+.footer-btn,
+button {
+  height: 54px;
+  // padding: 13px 34px;
+  padding: 17px 16px;
+  font-size: 18px;
+  background-color: #fbf7f0;
+  color: #000;
+  border: 1px solid #000;
+  transition: all 0.3s ease;
+  z-index: 2;
+  outline: none;
+}
+
+.footer button {
+  background: linear-gradient(to left, #fbf7f0 50%, #000 50%) right;
+  background-size: 200% 100%;
+}
+
+// .personalisation-container:hover:not(.footer-btn:hover) {
+.App:hover {
+  button:not(:hover) > span {
+    transform: rotateX(0deg) translateY(0);
+  }
+}
+
+.footer-btn,
+.homepage-btn,
+button {
+  position: relative;
+  width: 240px;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to left, #fbf7f0 50%, #000 50%) right;
+  background-size: 200% 100%;
+  overflow: hidden;
+  perspective: 1000px;
+
+  span {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    opacity: 1;
+    transition: transform 0.3s;
+    transform-origin: 50% 0;
+    transform-style: preserve-3d;
+    font-family: "Maison Neu Light";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.8px;
+    // transform: rotateX(0deg) translateY(0px);
+  }
+  span:before {
+    opacity: 0;
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    font-family: "Pixelated-Font";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.8px;
+    top: 100%;
+    // left: 0;
+    content: attr(data-hover);
+    transform: rotateX(-89deg);
+    transform-origin: 50% 0;
+    text-align: center;
+    transition: all 0.3s linear;
+  }
+  &:hover span,
+  &:focus span,
+  &:active span {
+    transform: rotateX(89deg) translateY(-25px);
+  }
+
+  &:hover span::before,
+  &:focus span::before,
+  &:active span::before {
+    opacity: 1;
+  }
+}
+
+.footer-inp {
+  width: 500px;
+  font-size: 20px;
+  font-family: "Maison Neu Light";
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: -0.8px;
+  border: 1px solid #646464;
+  color: #646464;
+  transition: all 0.3s ease;
+}
+
+.footer-inp:hover,
+.footer-inp:active {
+  border: 1px solid #000;
+  color: #000;
+}
+
+.footer-desc {
+  max-width: 322px;
+  font-family: "Maison Neu Mono";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  text-align: start;
+  padding: 25px 0 10px;
+}
+
+.btn-arrow {
+  width: 20px;
+  margin-left: 5px;
+  // transition: fontFamily 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+
+.footer-btn {
+  font-family: "Maison Neu Light";
+  font-weight: 600;
+  color: #000;
+}
+
+.homepage-btn.ftr-btn {
+  opacity: 1;
+  animation: none;
+}
+
+button:hover,
+.footer-btn:hover,
+.homepage-btn:hover {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Pixelated-Font";
+  background-position: left;
+  color: #fefefe;
+
+  img {
+    position: relative;
+    right: -8px;
+    transition: position 0.3s linear;
+  }
+}
+
+@keyframes font-change {
+  0% {
+    transform: translateY(-25px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media (pointer: coarse) {
+  button:hover,
+  .footer-btn:hover,
+  .homepage-btn.ftr-btn:hover {
+    background-position: right;
+    color: #000;
+    img {
+      position: static;
+    }
+    span {
+      font-family: "Maison Neu Light";
+      transform: rotateX(0deg) translateY(0px);
+    }
+  }
+
+  button:active,
+  .footer-btn:active,
+  .homepage-btn.ftr-btn:active {
+    // button:focus,
+    // .footer-btn:focus,
+    // .homepage-btn.ftr-btn:focus {
+    img {
+      position: relative;
+      right: -8px;
+      transition: position 0.3s linear;
+    }
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Pixelated-Font";
+    background-position: left;
+    color: #fefefe;
+
+    span {
+      transform: rotateX(89deg) translateY(-25px);
+    }
+  }
+}
+
+@media screen and (max-width: 931px) {
+  .footer-inp {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .footer-inp {
+    width: 370px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .footer-inp {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer-inp {
+    width: 450px;
+  }
+
+  .footer-inp,
+  .footer-btn {
+    padding: 15px 35px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .footer {
+    height: 175px;
+    justify-content: space-around;
+  }
+
+  .footer-inp {
+    width: 400px;
+    margin-bottom: 20px;
+  }
+
+  .footer-inp,
+  .footer-btn {
+    padding: 10px 35px;
+  }
+  // .ftr-btn span {
+  //   font-size: 22px;
+  // }
+}
+
+@media screen and (max-width: 450px) {
+  .footer-inp,
+  .footer-btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <!-- font preload  -->
+    <link
+      rel="preload"
+      as="font"
+      href="%PUBLIC_URL%/content/fonts/Pixel/PixeloidSans.ttf"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="%PUBLIC_URL%/content/fonts/MaisonNeue/MaisonNeue-Light.otf"
+      type="font/otf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="%PUBLIC_URL%/content/fonts/MaisonNeue/MaisonNeue-Medium.otf"
+      type="font/otf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="%PUBLIC_URL%/content/fonts/MaisonNeue/MaisonNeueMG-Light.otf"
+      type="font/otf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="%PUBLIC_URL%/content/fonts/MaisonNeue/MaisonNeue-Thin.otf"
+      type="font/otf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="%PUBLIC_URL%/content/fonts/MaisonNeue/MaisonNeue-Bold.otf"
+      type="font/otf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="%PUBLIC_URL%/content/fonts/Mono/MaisonNeueMono-Regular.otf"
+      type="font/otf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="%PUBLIC_URL%/content/fonts/MaisonNeue/MaisonNeue-LightItalic.otf"
+      type="font/otf"
+      crossorigin="anonymous"
+    />
+    <!-- Image preload -->
+    <link
+      rel="preload"
+      href="%PUBLIC_URL%/content/images/helix.svg"
+      as="image"
+    />
+    <link
+      rel="preload"
+      href="%PUBLIC_URL%/content/images/helix2.svg"
+      as="image"
+    />
+    <link
+      rel="preload"
+      href="%PUBLIC_URL%/content/images/helix3.svg"
+      as="image"
+    />
+    <link
+      rel="preload"
+      href="%PUBLIC_URL%/content/images/helix4.svg"
+      as="image"
+    />
+    <link rel="preload" href="%PUBLIC_URL%/content/images/arc.svg" as="image" />
+    <link
+      rel="preload"
+      href="%PUBLIC_URL%/content/images/circle.svg"
+      as="image"
+    />
+    <link
+      rel="preload"
+      href="%PUBLIC_URL%/content/images/triangle.svg"
+      as="image"
+    />
+    <link
+      rel="preload"
+      href="%PUBLIC_URL%/content/images/shuriken.svg"
+      as="image"
+    />
+    <link
+      rel="preload"
+      href="%PUBLIC_URL%/content/images/shuriken2.svg"
+      as="image"
+    />
+    <!-- helix arc circle triangle shuriken helix2 helix3 helix4 shuriken2 -->
+    <style>
+      @font-face {
+        font-family: "Pixelated-Font";
+        font-style: normal;
+        font-display: swap;
+        src: url("%PUBLIC_URL%/content/fonts/Pixel/PixeloidSans.ttf")
+          format("ttf");
+      }
+
+      @font-face {
+        font-family: "Maison Neu Light";
+        font-style: normal;
+        font-weight: 400;
+        src: url("%PUBLIC_URL%/content/fonts/MaisonNeue/MaisonNeue-Light.otf");
+      }
+
+      @font-face {
+        font-family: "Maison Neu Medium";
+        font-style: normal;
+        font-weight: 500;
+        src: url("%PUBLIC_URL%/content/fonts/MaisonNeue/MaisonNeue-Medium.otf");
+      }
+
+      @font-face {
+        font-family: "Maison Neu MG Light";
+        font-style: normal;
+        font-weight: 500;
+        src: url("%PUBLIC_URL%/content/fonts/MaisonNeue/MaisonNeueMG-Light.otf");
+      }
+
+      @font-face {
+        font-family: "Maison Neu Thin";
+        font-style: normal;
+        font-weight: 400;
+        src: url("%PUBLIC_URL%/content/fonts/MaisonNeue/MaisonNeue-Thin.otf");
+      }
+
+      @font-face {
+        font-family: "Maison Neu Bold";
+        font-style: normal;
+        font-weight: 700;
+        src: url("%PUBLIC_URL%/content/fonts/MaisonNeue/MaisonNeue-Bold.otf");
+      }
+
+      @font-face {
+        font-family: "Maison Neu Mono";
+        font-style: normal;
+        font-weight: 400;
+        src: url("%PUBLIC_URL%/content/fonts/Mono/MaisonNeueMono-Regular.otf");
+      }
+
+      @font-face {
+        font-family: "Maison Neu Italic";
+        font-style: normal;
+        font-weight: 300;
+        src: url("%PUBLIC_URL%/content/fonts/MaisonNeue/MaisonNeue-LightItalic.otf");
+      }
+    </style>
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="prefetch" href="./content/images/black-left-arrow.svg" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
+
+
+<!--  
+let response = {
+            "header": {
+                "storyInit": false,
+                "clientId": "ebay",
+                "step": 3,
+                "storyId": "story-141223331"
+            },
+            "body": {
+              "promptMessage":"\"\\\"With a sense of wonder and joy in your heart, you bid farewell to the old man and make your way back to your normal life, carrying the memories of your extraordinary holiday adventure with you. The holiday spirit fills you with warmth and gratitude, making this end-of-year celebration one to remember.\\\\n\\\\nSeason's Greetings from your friends at DEPT®!\\\" \\n\\nHappy Holidays, Love DEPT®!\"",
+              "promptImage":"https://oaidalleapiprodscus.blob.core.windows.net/private/org-CGS9tT23TVCseAEZbty2kFt7/user-09837XwkbzTjcjxgHUMhgu5O/img-lq2uQdZabOYbw3RmHj6hWy7D.png?st=2024-06-15T09%3A26%3A52Z&se=2024-06-15T11%3A26%3A52Z&sp=r&sv=2023-11-03&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-06-14T19%3A13%3A07Z&ske=2024-06-15T19%3A13%3A07Z&sks=b&skv=2023-11-03&sig=IzVbMB%2BFoPA/xAYN5A9jtI352vC/vRcxJDtIkW56AR8%3D",
+              "storyId":"1",
+              "messages": [
+                {
+                    "role": "system",
+                    "content": "Create a unique text-based adventure game filled with humor and festive spirit. Each story and playthrough must offer a distinct narrative and engaging experience. The story must offer three chances to influence its direction. Responses should be no more than 3 very short sentences. Begin each story section with a festive image in a 1:1 aspect ratio, in the art/visual style selected, reflecting the choices entered regarding country of origin, genre, and visual style. Blend the selected genre, visual style, humor, end of year festive spirit, and diverse character representation. Adjust images to fit the overall theme if a request does not align with content policy. The adventure must center around end-of-year festive celebrations, with a light-hearted, comedic tone. Provide two predefined options at each juncture, and a third option to \\\"choose your own action.. Conclude the story after the third response. Also show options with prefix \\\"Option\\\" in each step.Include image description in square brackets. End with \\\"Happy Holidays, Love DEPT\\\" on its own line."
+                },
+                {
+                    "role": "assistant",
+                    "content": "Which Country are you from?"
+                },
+                {
+                    "role": "user",
+                    "content": "\"India\""
+                },
+                {
+                    "role": "assistant",
+                    "content": "Do you have any unique ways of celebrating the end-of-year holidays?"
+                },
+                {
+                    "role": "user",
+                    "content": "\"Christmas\""
+                },
+                {
+                    "role": "assistant",
+                    "content": "What genre are you in the mood for today?"
+                },
+                {
+                    "role": "user",
+                    "content": "\"drama\""
+                },
+                {
+                    "role": "assistant",
+                    "content": "What visual art style would you like to see?"
+                },
+                {
+                    "role": "user",
+                    "content": "\"3d art let's start the story\""
+                },
+                {
+                  "role": "assistant",
+                  "content": "Envision a cityscape from the future around holiday season, towering skyscrapers are decorated with glowing festive lights. Vehicles capable of flight travel across the sky, their paths marked by radiant streaks of different colors. A grand holographic Christmas tree stands proudly in the city square, its digital ornaments and lights flickering. Amid the hustle and bustle, an interesting shop named 'Time Traveller's Emporium' catches your eye. Inside, an eccentric elderly man wears a Santa hat, his surroundings a mishmash of curious devices and quirky gizmos. The man offers a device, promising unprecedented festive adventures through time and space. Do you accept the offer or decline and continue exploring this city?", 
+                },
+                {
+                  "role": "user",
+                  "content": "\"Accept the offer\""
+                },
+                {
+                  "role": "assistant",
+                  "content": "As you accept the old man's offer, he hands you the device and mutters some cryptic instructions. With a flash of light, you find yourself hurtling through time and space, landing in a futuristic winter wonderland on a distant planet.\n\n\"Image Description: \n\nYou find yourself surrounded by alien creatures wearing Santa hats and singing robotic carols. The sky above you twinkles with multiple moons, casting a surreal glow on the icy landscape. In the distance, you spot a towering ice castle with neon lights and holographic decorations, beckoning you to explore.\n\nAs you make your way towards the castle, you encounter a group of friendly aliens who invite you to join in their holiday festivities. Will you immerse yourself in this alien celebration, or try to find a way back to your own time and place?\"",
+                },
+                {
+                  "role": "user",
+                  "content": "\" immerse yourself in this alien celebration\""
+                },
+                {
+                  "role": "assistant",
+                  "content": "As you immerse yourself in the alien celebration, you dance and feast with the peculiar creatures, experiencing a holiday unlike any other. The alien music fills the air, and the glittering decorations of the ice castle create a mesmerizing spectacle.\\n\\n\\\"Image Description:\\n\\nThe scene shifts to you and the alien creatures gathered around a massive holographic bonfire, sharing stories and laughter in this strange and enchanting world. The alien leader gestures towards a portal shimmering in the distance, offering you a chance to return home.\\n\\nAs you bid farewell to your new alien friends, you step through the portal and find yourself back in the Time Traveler's Emporium. The old man smiles knowingly, handing you a small trinket to remember your unique holiday adventure.\\n\\nWith a grateful nod, you thank the old man and head back to the familiar streets of the futuristic city, filled with memories of your sci-fi holiday escapade. Season's Greetings from your friends at DEPT®!\\\"\" \n\nHappy Holidays, Love DEPT®!",
+              },
+                {
+                  "role": "user",
+                  "content": "\" thanks to the old man \""
+                },
+            ]
+          }
+        } -->
